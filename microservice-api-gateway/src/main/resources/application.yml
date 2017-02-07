@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: microservice-api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    hostname: gateway
+server:
+  port: 8060
