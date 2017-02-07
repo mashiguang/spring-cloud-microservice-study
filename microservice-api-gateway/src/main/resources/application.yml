@@ -9,3 +9,8 @@ eureka:
     hostname: gateway
 server:
   port: 8060
+zuul:
+  routes:
+    user:
+      path: /user/**
+      service-id: microservice-provider-user
