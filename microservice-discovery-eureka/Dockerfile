@@ -2,7 +2,7 @@ FROM java:8
 
 VOLUME /tmp
 
-ADD garget/microservice-discovery-eureka-0.0.1-SNAPSHOT.jar app.jar
+ADD target/microservice-discovery-eureka-0.0.1-SNAPSHOT.jar app.jar
 
 RUN bash -c 'touch /app.jar'
 
