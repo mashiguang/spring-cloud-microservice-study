@@ -1,5 +1,5 @@
 eureka:
-  build: ./eureka
+  build: ./microservice-discovery-eureka
   ports:
     - "8761:8761"
   expose:
