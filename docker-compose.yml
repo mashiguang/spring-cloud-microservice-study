@@ -4,3 +4,14 @@ eureka:
     - "8761:8761"
   expose:
     - 8761
+provider-user:
+  build: ./microservice-provider-user
+  ports:
+    - "8000:8000"
+  expose:
+    - 8000
+  depends-on:
+    - eureka
+  links:
+    - eureka
+
