@@ -7,7 +7,7 @@ services:
       - "8761:8761"
     expose:
       - 8761
-  provider-user:
+  provider-user-1:
     build: ./microservice-provider-user
     ports:
       - "8001:8001"
@@ -15,3 +15,25 @@ services:
       - 8001
     links:
       - eureka
+    environment:
+      - server.port=8001
+  provider-user-2:
+    build: ./microservice-provider-user
+    ports:
+      - "8002:8002"
+    expose:
+      - 8002
+    links:
+      - eureka
+    environment:
+      - server.port=8002
+  consumer-movie-ribbon:
+    build: ./microservice-consumer-movie-ribbon
+    ports:
+      - "8010:8010"
+    expose:
+      - 8010
+    links:
+      - eureka
+    environment:
+      - server.port=8010
